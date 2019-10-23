@@ -14,8 +14,9 @@ module NavigationHelpers
     #debugger
     case page_name
 
-    when /^the home\s?page$/
-      '/movies'
+    # when /^the home\s?page$/
+    #   '/movies'
+    when /^the (RottenPotatoes )?home\s?page$/ then '/movies'
     
     when /^the edit page for "(.*)"$/
       edit_movie_path(Movie.find_by_title($1))
