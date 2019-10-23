@@ -11,6 +11,7 @@ class MoviesController < ApplicationController
   end
 
   def index
+    #debugger
     sort = params[:sort] || session[:sort]
     case sort
     when 'title'
